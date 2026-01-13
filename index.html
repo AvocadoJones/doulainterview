@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doula Interview Questions (First Baby • VHC Arlington)</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121a2b;
+      --card2:#0f1727;
+      --text:#e7eefc;
+      --muted:#a9b7d6;
+      --accent:#7aa7ff;
+      --accent2:#7ff0c2;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(122,167,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 30%, rgba(127,240,194,.10), transparent 55%),
+        var(--bg);
+      line-height:1.45;
+    }
+    header{
+      padding: 28px 18px 18px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .title{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin:6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pillrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .pill{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      user-select:none;
+    }
+    .pill strong{ color: var(--text); font-weight:600; }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 18px 42px;
+    }
+    .toolbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      margin: 12px 0 18px;
+    }
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    button, .linkbtn{
+      cursor:pointer;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      box-shadow: none;
+      transition: transform .05s ease, background .2s ease, border-color .2s ease;
+      user-select:none;
+    }
+    button:hover, .linkbtn:hover{
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.16);
+    }
+    button:active{ transform: translateY(1px); }
+    .linkbtn{
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .search{
+      flex: 1 1 260px;
+      max-width: 420px;
+      position:relative;
+    }
+    .search input{
+      width:100%;
+      padding: 11px 12px 11px 38px;
+      border-radius: 10px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      outline:none;
+      font-size: 13px;
+    }
+    .search input::placeholder{ color: rgba(169,183,214,.75); }
+    .search .icon{
+      position:absolute;
+      top:50%;
+      left:12px;
+      transform: translateY(-50%);
+      color: rgba(169,183,214,.9);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media(min-width: 860px){
+      .grid{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    section{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .sec-head{
+      padding: 14px 14px 10px;
+      background: rgba(0,0,0,.16);
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .sec-head h2{
+      margin:0;
+      font-size: 15px;
+      letter-spacing:.2px;
+    }
+    .prompt{
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .count{
+      color: rgba(231,238,252,.85);
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 6px 8px;
+      border:1px solid var(--border);
+      border-radius: 10px;
+      background: rgba(255,255,255,.04);
+      white-space:nowrap;
+      height: fit-content;
+    }
+
+    ol{
+      margin:0;
+      padding: 8px 14px 14px 34px;
+    }
+    li{
+      margin: 10px 0;
+      padding: 10px 10px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.14);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    li:hover{
+      border-color: rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+    }
+    .foot{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      border-top:1px solid var(--border);
+      padding-top: 14px;
+    }
+    .tip{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      max-width: 720px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(122,167,255,.12);
+      margin-top: 4px;
+      flex:0 0 auto;
+    }
+    mark{
+      background: rgba(127,240,194,.22);
+      color: var(--text);
+      padding: 0 .15em;
+      border-radius: .25em;
+    }
+    .hide{ display:none !important; }
+    @media print{
+      body{ background:white; color:black; }
+      header, .toolbar{ display:none; }
+      section{ box-shadow:none; background:white; }
+      li{ background:white; }
+      .wrap{ max-width:none; padding:0; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="title">
+    <div>
+      <h1>Doula Interview Questions</h1>
+      <div class="subtitle">First baby • Virginia Hospital Center (Arlington) • Zoom-friendly checklist</div>
+      <div class="pillrow">
+        <div class="pill"><strong>Tip:</strong> Ask the prompt line out loud, then pick 3–5 questions per section.</div>
+        <div class="pill"><strong>Use:</strong> Check chemistry + hospital experience + partner support.</div>
+      </div>
+    </div>
+    <div class="pillrow" style="justify-content:flex-end">
+      <div class="pill"><strong>Focus:</strong> Calm, practical, hospital-savvy</div>
+      <div class="pill"><strong>Includes:</strong> TENS unit questions</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div class="btns">
+      <button id="expandAll" type="button">Expand all</button>
+      <button id="collapseAll" type="button">Collapse all</button>
+      <button id="print" type="button">Print</button>
+      <a class="linkbtn" href="#" id="copyLink" title="Copies all questions to clipboard (plain text)">Copy all</a>
+    </div>
+    <div class="search">
+      <span class="icon">⌕</span>
+      <input id="q" type="search" placeholder="Search questions (e.g., epidural, induction, C-section, TENS)..." />
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+    <!-- Section 1 -->
+    <section data-title="Getting to Know You">
+      <div class="sec-head">
+        <div>
+          <h2>1) Getting to Know You</h2>
+          <div class="prompt">“We’re having our first baby, so we’d love to hear a little about you.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How did you become a doula?</li>
+        <li>How long have you been doing this?</li>
+        <li>About how many births have you attended?</li>
+        <li>How much of your work is with first-time parents?</li>
+      </ol>
+    </section>
+
+    <!-- Section 2 -->
+    <section data-title="VHC Experience">
+      <div class="sec-head">
+        <div>
+          <h2>2) Your Experience at Virginia Hospital Center</h2>
+          <div class="prompt">“We’ll be delivering at VHC, so we’re curious about your experience there.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>Have you attended births at VHC before?</li>
+        <li>What is the labor and delivery environment like there?</li>
+        <li>How do the nurses and OBs usually interact with doulas?</li>
+        <li>Are there any hospital routines at VHC that we should be aware of ahead of time?</li>
+      </ol>
+    </section>
+
+    <!-- Section 3 -->
+    <section data-title="First-Time Parent Support">
+      <div class="sec-head">
+        <div>
+          <h2>3) How You Work With First-Time Parents</h2>
+          <div class="prompt">“We’re excited, but also a little nervous since this is all new to us.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How do you support people who have never given birth before?</li>
+        <li>How do you help us prepare mentally and emotionally for labor?</li>
+        <li>How do you help us understand our options when decisions come up?</li>
+        <li>What does “informed consent” mean in your work?</li>
+      </ol>
+    </section>
+
+    <!-- Section 4 -->
+    <section data-title="Philosophy">
+      <div class="sec-head">
+        <div>
+          <h2>4) Your Birth Philosophy</h2>
+          <div class="prompt">“We’re hoping for a calm, supportive hospital birth.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How do you support low-intervention births in a medical setting?</li>
+        <li>How do you feel about epidurals and pain medication?</li>
+        <li>How do you handle it if plans change during labor?</li>
+        <li>How do you advocate for us while still working well with the hospital staff?</li>
+      </ol>
+    </section>
+
+    <!-- Section 5 -->
+    <section data-title="Supporting Both of Us">
+      <div class="sec-head">
+        <div>
+          <h2>5) Supporting Both of Us</h2>
+          <div class="prompt">“We want this to feel like something we’re doing together.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How do you support the non-birthing partner during labor?</li>
+        <li>How do you help partners know what to do and how to help?</li>
+        <li>What do you do if one of us is feeling overwhelmed or anxious?</li>
+        <li>How do you make sure we still feel in control of our birth?</li>
+      </ol>
+    </section>
+
+    <!-- Section 6 -->
+    <section data-title="Comfort Measures">
+      <div class="sec-head">
+        <div>
+          <h2>6) Labor Support &amp; Comfort</h2>
+          <div class="prompt">“We’d love to know what you actually do during labor.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>What kinds of comfort measures do you use most?</li>
+        <li>How do you help with things like back labor or long inductions?</li>
+        <li>How do you know when it’s time to switch techniques?</li>
+        <li>How do you support someone with an epidural?</li>
+        <li>How do you support someone without one?</li>
+      </ol>
+    </section>
+
+    <!-- Section 7 -->
+    <section data-title="TENS Unit">
+      <div class="sec-head">
+        <div>
+          <h2>7) TENS Unit</h2>
+          <div class="prompt">“We’re interested in using a TENS unit for pain management.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>Do you provide a TENS unit?</li>
+        <li>Is it included in your fee?</li>
+        <li>Do you help with placement, timing, and adjusting it during labor?</li>
+        <li>Have you used TENS units in hospital births and inductions?</li>
+      </ol>
+    </section>
+
+    <!-- Section 8 -->
+    <section data-title="Plan Changes">
+      <div class="sec-head">
+        <div>
+          <h2>8) If Things Don’t Go as Planned</h2>
+          <div class="prompt">“We know first births can be unpredictable.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How do you support us if an induction is recommended?</li>
+        <li>What do you do if labor stalls?</li>
+        <li>How do you support us if a C-section becomes necessary?</li>
+        <li>Are you able to come to the OR if allowed?</li>
+        <li>How do you help us process a difficult or unexpected birth?</li>
+      </ol>
+    </section>
+
+    <!-- Section 9 -->
+    <section data-title="Postpartum">
+      <div class="sec-head">
+        <div>
+          <h2>9) After the Baby Is Born</h2>
+          <div class="prompt">“We want support in those first important moments.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>Do you stay for the golden hour?</li>
+        <li>How do you help with the first latch and breastfeeding?</li>
+        <li>What postpartum visits are included?</li>
+        <li>How do you support emotional recovery after birth?</li>
+      </ol>
+    </section>
+
+    <!-- Section 10 -->
+    <section data-title="Availability">
+      <div class="sec-head">
+        <div>
+          <h2>10) Availability &amp; Backup</h2>
+          <div class="prompt">“We want to make sure we’re covered.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>How many clients do you take around our due date?</li>
+        <li>Who is your backup if you’re at another birth?</li>
+        <li>How do we reach you when labor starts?</li>
+        <li>When do you usually come to the hospital?</li>
+      </ol>
+    </section>
+
+    <!-- Section 11 -->
+    <section data-title="Fit">
+      <div class="sec-head">
+        <div>
+          <h2>11) Fit &amp; Logistics</h2>
+          <div class="prompt">“We’re really trying to find the right match.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>What kinds of families do you work best with?</li>
+        <li>What kinds of families might not be a great fit?</li>
+        <li>What’s a birth you’re especially proud of?</li>
+        <li>Why do you do this work?</li>
+      </ol>
+    </section>
+
+    <!-- Section 12 -->
+    <section data-title="Fees">
+      <div class="sec-head">
+        <div>
+          <h2>12) Fees &amp; Contract</h2>
+          <div class="prompt">“Let’s talk logistics.”</div>
+        </div>
+        <div class="count" data-count></div>
+      </div>
+      <ol>
+        <li>What’s included in your fee?</li>
+        <li>When is payment due?</li>
+        <li>What’s your refund or cancellation policy?</li>
+        <li>What happens if we end up with a scheduled C-section?</li>
+        <li>Are you insured and certified?</li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="foot">
+    <div class="tip">
+      <div class="dot"></div>
+      <div>
+        <div><strong style="color:var(--text)">Quick close-out prompt:</strong></div>
+        <div>“Is there anything you think first-time parents often overlook that you’d recommend we plan for?”</div>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <div><span style="color:var(--muted)">Last updated:</span> <span id="date"></span></div>
+      <div style="color:var(--muted)">Search highlights matches for easy scanning.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Set date
+  const d = new Date();
+  document.getElementById('date').textContent = d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
+
+  // Count per section and make section collapsible by clicking header
+  const sections = Array.from(document.querySelectorAll('section'));
+  sections.forEach(sec => {
+    const items = sec.querySelectorAll('li');
+    sec.querySelector('[data-count]').textContent = `${items.length} Qs`;
+    const head = sec.querySelector('.sec-head');
+    head.style.cursor = 'pointer';
+    head.title = 'Click to collapse/expand';
+    head.addEventListener('click', () => {
+      sec.querySelector('ol').classList.toggle('hide');
+    });
+  });
+
+  // Expand / collapse all
+  const expandAll = () => sections.forEach(s => s.querySelector('ol').classList.remove('hide'));
+  const collapseAll = () => sections.forEach(s => s.querySelector('ol').classList.add('hide'));
+
+  document.getElementById('expandAll').addEventListener('click', expandAll);
+  document.getElementById('collapseAll').addEventListener('click', collapseAll);
+  document.getElementById('print').addEventListener('click', () => window.print());
+
+  // Search + highlight
+  const input = document.getElementById('q');
+  const allLis = Array.from(document.querySelectorAll('li'));
+  const originalText = new Map(allLis.map(li => [li, li.textContent]));
+
+  function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function clearHighlights() {
+    allLis.forEach(li => li.innerHTML = originalText.get(li));
+    sections.forEach(sec => sec.classList.remove('hide'));
+    // show all list items
+    allLis.forEach(li => li.classList.remove('hide'));
+  }
+
+  input.addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    clearHighlights();
+    if (!q) return;
+
+    const re = new RegExp(escapeRegExp(q), 'ig');
+    // hide non-matching questions, collapse sections without matches
+    sections.forEach(sec => {
+      const lis = Array.from(sec.querySelectorAll('li'));
+      let any = false;
+
+      lis.forEach(li => {
+        const text = originalText.get(li);
+        const match = text.toLowerCase().includes(q);
+        if (match) {
+          any = true;
+          li.innerHTML = text.replace(re, (m) => `<mark>${m}</mark>`);
+          li.classList.remove('hide');
+        } else {
+          li.classList.add('hide');
+        }
+      });
+
+      sec.classList.toggle('hide', !any);
+      // ensure visible sections are expanded for scanning
+      if (any) sec.querySelector('ol').classList.remove('hide');
+    });
+  });
+
+  // Copy all to clipboard (plain text)
+  document.getElementById('copyLink').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const lines = [];
+    lines.push('Doula Interview Questions (First Baby • VHC Arlington)');
+    lines.push('---');
+    sections.forEach((sec, idx) => {
+      const title = sec.querySelector('h2').textContent.trim();
+      const prompt = sec.querySelector('.prompt')?.textContent.trim();
+      lines.push('');
+      lines.push(title);
+      if (prompt) lines.push(prompt);
+      sec.querySelectorAll('li').forEach((li, i) => {
+        lines.push(`${i+1}. ${originalText.get(li)}`);
+      });
+    });
+    try{
+      await navigator.clipboard.writeText(lines.join('\n'));
+      const a = e.target;
+      const old = a.textContent;
+      a.textContent = 'Copied ✓';
+      setTimeout(() => a.textContent = old, 1200);
+    }catch(err){
+      alert('Copy failed. You can still select and copy manually.');
+    }
+  });
+
+  // Start with all expanded for interview use
+  expandAll();
+</script>
+</body>
+</html>
