@@ -8,7 +8,6 @@
     :root{
       --bg:#0b1220;
       --card:#121a2b;
-      --card2:#0f1727;
       --text:#e7eefc;
       --muted:#a9b7d6;
       --accent:#7aa7ff;
@@ -42,22 +41,9 @@
       gap:14px;
       flex-wrap:wrap;
     }
-    h1{
-      margin:0;
-      font-size: 22px;
-      letter-spacing:.2px;
-    }
-    .subtitle{
-      margin:6px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .pillrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 14px;
-    }
+    h1{ margin:0; font-size: 22px; letter-spacing:.2px; }
+    .subtitle{ margin:6px 0 0; color: var(--muted); font-size: 14px; }
+    .pillrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
     .pill{
       border:1px solid var(--border);
       background: rgba(255,255,255,.04);
@@ -71,25 +57,15 @@
       user-select:none;
     }
     .pill strong{ color: var(--text); font-weight:600; }
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 18px 42px;
-    }
+
+    .wrap{ max-width: 980px; margin: 0 auto; padding: 0 18px 42px; }
+
     .toolbar{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
       margin: 12px 0 18px;
     }
-    .btns{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
+    .btns{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
     button, .linkbtn{
       cursor:pointer;
       border:1px solid var(--border);
@@ -98,14 +74,10 @@
       padding: 10px 12px;
       border-radius: 10px;
       font-size: 13px;
-      box-shadow: none;
       transition: transform .05s ease, background .2s ease, border-color .2s ease;
       user-select:none;
     }
-    button:hover, .linkbtn:hover{
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.16);
-    }
+    button:hover, .linkbtn:hover{ background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
     button:active{ transform: translateY(1px); }
     .linkbtn{
       text-decoration:none;
@@ -113,11 +85,8 @@
       align-items:center;
       gap:8px;
     }
-    .search{
-      flex: 1 1 260px;
-      max-width: 420px;
-      position:relative;
-    }
+
+    .search{ flex: 1 1 260px; max-width: 420px; position:relative; }
     .search input{
       width:100%;
       padding: 11px 12px 11px 38px;
@@ -130,25 +99,15 @@
     }
     .search input::placeholder{ color: rgba(169,183,214,.75); }
     .search .icon{
-      position:absolute;
-      top:50%;
-      left:12px;
-      transform: translateY(-50%);
+      position:absolute; top:50%; left:12px; transform: translateY(-50%);
       color: rgba(169,183,214,.9);
       font-family: var(--mono);
       font-size: 12px;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    @media(min-width: 860px){
-      .grid{
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+    .grid{ display:grid; grid-template-columns: 1fr; gap: 14px; }
+    @media(min-width: 860px){ .grid{ grid-template-columns: 1fr 1fr; } }
+
     section{
       border:1px solid var(--border);
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
@@ -165,16 +124,8 @@
       justify-content:space-between;
       gap:10px;
     }
-    .sec-head h2{
-      margin:0;
-      font-size: 15px;
-      letter-spacing:.2px;
-    }
-    .prompt{
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-    }
+    .sec-head h2{ margin:0; font-size: 15px; letter-spacing:.2px; }
+    .prompt{ margin: 4px 0 0; color: var(--muted); font-size: 12px; }
     .count{
       color: rgba(231,238,252,.85);
       font-family: var(--mono);
@@ -187,21 +138,111 @@
       height: fit-content;
     }
 
-    ol{
-      margin:0;
-      padding: 8px 14px 14px 34px;
-    }
-    li{
+    ol{ margin:0; padding: 8px 14px 14px 14px; }
+    .qitem{
+      list-style:none;
       margin: 10px 0;
-      padding: 10px 10px;
+      padding: 12px 12px;
       border-radius: 12px;
       background: rgba(0,0,0,.14);
       border: 1px solid rgba(255,255,255,.06);
     }
-    li:hover{
+    .qitem:hover{
       border-color: rgba(255,255,255,.12);
       background: rgba(0,0,0,.18);
     }
+
+    .qrow{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .qrow input[type="checkbox"]{
+      margin-top: 3px;
+      width:18px; height:18px;
+      accent-color: var(--accent2);
+      cursor:pointer;
+      flex:0 0 auto;
+    }
+    .qtext{
+      flex:1 1 auto;
+      min-width: 0;
+    }
+    .qtext .label{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .qtext .label span{
+      font-size: 13.5px;
+    }
+    .qactions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .smallbtn{
+      padding: 7px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      color: var(--text);
+      cursor:pointer;
+      user-select:none;
+    }
+    .smallbtn:hover{ background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
+
+    details.notes{
+      margin-top: 10px;
+      border-top: 1px dashed rgba(255,255,255,.12);
+      padding-top: 10px;
+    }
+    details.notes summary{
+      cursor:pointer;
+      color: var(--muted);
+      font-size: 12px;
+      user-select:none;
+    }
+    .notesbox{
+      margin-top: 10px;
+      display:grid;
+      gap:10px;
+    }
+    .notesbox label{
+      font-size: 12px;
+      color: var(--muted);
+      display:block;
+      margin-bottom: 6px;
+    }
+    textarea{
+      width:100%;
+      min-height: 72px;
+      resize: vertical;
+      padding: 10px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      outline:none;
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+    textarea:focus{ border-color: rgba(127,240,194,.40); }
+
+    .done .qtext span{ text-decoration: line-through; color: rgba(231,238,252,.70); }
+    .hide{ display:none !important; }
+
+    mark{
+      background: rgba(127,240,194,.22);
+      color: var(--text);
+      padding: 0 .15em;
+      border-radius: .25em;
+    }
+
     .foot{
       margin-top: 18px;
       color: var(--muted);
@@ -227,18 +268,13 @@
       margin-top: 4px;
       flex:0 0 auto;
     }
-    mark{
-      background: rgba(127,240,194,.22);
-      color: var(--text);
-      padding: 0 .15em;
-      border-radius: .25em;
-    }
-    .hide{ display:none !important; }
+
     @media print{
       body{ background:white; color:black; }
-      header, .toolbar{ display:none; }
+      header, .toolbar, .foot{ display:none; }
       section{ box-shadow:none; background:white; }
-      li{ background:white; }
+      .qitem{ background:white; }
+      textarea, details.notes, .qactions{ display:none !important; }
       .wrap{ max-width:none; padding:0; }
     }
   </style>
@@ -249,15 +285,15 @@
   <div class="title">
     <div>
       <h1>Doula Interview Questions</h1>
-      <div class="subtitle">First baby • Virginia Hospital Center (Arlington) • Zoom-friendly checklist</div>
+      <div class="subtitle">First baby • Virginia Hospital Center (Arlington) • Checklist + notes</div>
       <div class="pillrow">
-        <div class="pill"><strong>Tip:</strong> Ask the prompt line out loud, then pick 3–5 questions per section.</div>
-        <div class="pill"><strong>Use:</strong> Check chemistry + hospital experience + partner support.</div>
+        <div class="pill"><strong>Tip:</strong> Click the checkbox when asked; open “Notes” if you want to record details.</div>
+        <div class="pill"><strong>Saved:</strong> Your checks + notes persist in this browser (localStorage).</div>
       </div>
     </div>
     <div class="pillrow" style="justify-content:flex-end">
-      <div class="pill"><strong>Focus:</strong> Calm, practical, hospital-savvy</div>
       <div class="pill"><strong>Includes:</strong> TENS unit questions</div>
+      <div class="pill"><strong>Best use:</strong> Keep open during Zoom</div>
     </div>
   </div>
 </header>
@@ -267,16 +303,19 @@
     <div class="btns">
       <button id="expandAll" type="button">Expand all</button>
       <button id="collapseAll" type="button">Collapse all</button>
+      <button id="reset" type="button">Reset checks & notes</button>
       <button id="print" type="button">Print</button>
       <a class="linkbtn" href="#" id="copyLink" title="Copies all questions to clipboard (plain text)">Copy all</a>
     </div>
     <div class="search">
       <span class="icon">⌕</span>
-      <input id="q" type="search" placeholder="Search questions (e.g., epidural, induction, C-section, TENS)..." />
+      <input id="q" type="search" placeholder="Search (e.g., epidural, induction, C-section, TENS)..." />
     </div>
   </div>
 
   <div class="grid" id="grid">
+
+    <!-- Helper: each question is rendered as a list item with checkbox + optional notes -->
     <!-- Section 1 -->
     <section data-title="Getting to Know You">
       <div class="sec-head">
@@ -287,10 +326,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How did you become a doula?</li>
-        <li>How long have you been doing this?</li>
-        <li>About how many births have you attended?</li>
-        <li>How much of your work is with first-time parents?</li>
+        <li class="qitem" data-id="s1q1"></li>
+        <li class="qitem" data-id="s1q2"></li>
+        <li class="qitem" data-id="s1q3"></li>
+        <li class="qitem" data-id="s1q4"></li>
       </ol>
     </section>
 
@@ -304,10 +343,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>Have you attended births at VHC before?</li>
-        <li>What is the labor and delivery environment like there?</li>
-        <li>How do the nurses and OBs usually interact with doulas?</li>
-        <li>Are there any hospital routines at VHC that we should be aware of ahead of time?</li>
+        <li class="qitem" data-id="s2q1"></li>
+        <li class="qitem" data-id="s2q2"></li>
+        <li class="qitem" data-id="s2q3"></li>
+        <li class="qitem" data-id="s2q4"></li>
       </ol>
     </section>
 
@@ -321,10 +360,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How do you support people who have never given birth before?</li>
-        <li>How do you help us prepare mentally and emotionally for labor?</li>
-        <li>How do you help us understand our options when decisions come up?</li>
-        <li>What does “informed consent” mean in your work?</li>
+        <li class="qitem" data-id="s3q1"></li>
+        <li class="qitem" data-id="s3q2"></li>
+        <li class="qitem" data-id="s3q3"></li>
+        <li class="qitem" data-id="s3q4"></li>
       </ol>
     </section>
 
@@ -338,10 +377,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How do you support low-intervention births in a medical setting?</li>
-        <li>How do you feel about epidurals and pain medication?</li>
-        <li>How do you handle it if plans change during labor?</li>
-        <li>How do you advocate for us while still working well with the hospital staff?</li>
+        <li class="qitem" data-id="s4q1"></li>
+        <li class="qitem" data-id="s4q2"></li>
+        <li class="qitem" data-id="s4q3"></li>
+        <li class="qitem" data-id="s4q4"></li>
       </ol>
     </section>
 
@@ -350,15 +389,15 @@
       <div class="sec-head">
         <div>
           <h2>5) Supporting Both of Us</h2>
-          <div class="prompt">“We want this to feel like something we’re doing together.”</div>
+          <div class="prompt">“We really want this to feel like something we’re doing together.”</div>
         </div>
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How do you support the non-birthing partner during labor?</li>
-        <li>How do you help partners know what to do and how to help?</li>
-        <li>What do you do if one of us is feeling overwhelmed or anxious?</li>
-        <li>How do you make sure we still feel in control of our birth?</li>
+        <li class="qitem" data-id="s5q1"></li>
+        <li class="qitem" data-id="s5q2"></li>
+        <li class="qitem" data-id="s5q3"></li>
+        <li class="qitem" data-id="s5q4"></li>
       </ol>
     </section>
 
@@ -372,11 +411,11 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>What kinds of comfort measures do you use most?</li>
-        <li>How do you help with things like back labor or long inductions?</li>
-        <li>How do you know when it’s time to switch techniques?</li>
-        <li>How do you support someone with an epidural?</li>
-        <li>How do you support someone without one?</li>
+        <li class="qitem" data-id="s6q1"></li>
+        <li class="qitem" data-id="s6q2"></li>
+        <li class="qitem" data-id="s6q3"></li>
+        <li class="qitem" data-id="s6q4"></li>
+        <li class="qitem" data-id="s6q5"></li>
       </ol>
     </section>
 
@@ -390,10 +429,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>Do you provide a TENS unit?</li>
-        <li>Is it included in your fee?</li>
-        <li>Do you help with placement, timing, and adjusting it during labor?</li>
-        <li>Have you used TENS units in hospital births and inductions?</li>
+        <li class="qitem" data-id="s7q1"></li>
+        <li class="qitem" data-id="s7q2"></li>
+        <li class="qitem" data-id="s7q3"></li>
+        <li class="qitem" data-id="s7q4"></li>
       </ol>
     </section>
 
@@ -407,11 +446,11 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How do you support us if an induction is recommended?</li>
-        <li>What do you do if labor stalls?</li>
-        <li>How do you support us if a C-section becomes necessary?</li>
-        <li>Are you able to come to the OR if allowed?</li>
-        <li>How do you help us process a difficult or unexpected birth?</li>
+        <li class="qitem" data-id="s8q1"></li>
+        <li class="qitem" data-id="s8q2"></li>
+        <li class="qitem" data-id="s8q3"></li>
+        <li class="qitem" data-id="s8q4"></li>
+        <li class="qitem" data-id="s8q5"></li>
       </ol>
     </section>
 
@@ -425,10 +464,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>Do you stay for the golden hour?</li>
-        <li>How do you help with the first latch and breastfeeding?</li>
-        <li>What postpartum visits are included?</li>
-        <li>How do you support emotional recovery after birth?</li>
+        <li class="qitem" data-id="s9q1"></li>
+        <li class="qitem" data-id="s9q2"></li>
+        <li class="qitem" data-id="s9q3"></li>
+        <li class="qitem" data-id="s9q4"></li>
       </ol>
     </section>
 
@@ -442,10 +481,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>How many clients do you take around our due date?</li>
-        <li>Who is your backup if you’re at another birth?</li>
-        <li>How do we reach you when labor starts?</li>
-        <li>When do you usually come to the hospital?</li>
+        <li class="qitem" data-id="s10q1"></li>
+        <li class="qitem" data-id="s10q2"></li>
+        <li class="qitem" data-id="s10q3"></li>
+        <li class="qitem" data-id="s10q4"></li>
       </ol>
     </section>
 
@@ -459,10 +498,10 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>What kinds of families do you work best with?</li>
-        <li>What kinds of families might not be a great fit?</li>
-        <li>What’s a birth you’re especially proud of?</li>
-        <li>Why do you do this work?</li>
+        <li class="qitem" data-id="s11q1"></li>
+        <li class="qitem" data-id="s11q2"></li>
+        <li class="qitem" data-id="s11q3"></li>
+        <li class="qitem" data-id="s11q4"></li>
       </ol>
     </section>
 
@@ -476,13 +515,14 @@
         <div class="count" data-count></div>
       </div>
       <ol>
-        <li>What’s included in your fee?</li>
-        <li>When is payment due?</li>
-        <li>What’s your refund or cancellation policy?</li>
-        <li>What happens if we end up with a scheduled C-section?</li>
-        <li>Are you insured and certified?</li>
+        <li class="qitem" data-id="s12q1"></li>
+        <li class="qitem" data-id="s12q2"></li>
+        <li class="qitem" data-id="s12q3"></li>
+        <li class="qitem" data-id="s12q4"></li>
+        <li class="qitem" data-id="s12q5"></li>
       </ol>
     </section>
+
   </div>
 
   <div class="foot">
@@ -495,51 +535,250 @@
     </div>
     <div style="text-align:right">
       <div><span style="color:var(--muted)">Last updated:</span> <span id="date"></span></div>
-      <div style="color:var(--muted)">Search highlights matches for easy scanning.</div>
+      <div style="color:var(--muted)">Checks + notes save locally in this browser.</div>
     </div>
   </div>
 </div>
 
 <script>
-  // Set date
+  // ------------------------------
+  // Data model for questions
+  // ------------------------------
+  const QUESTIONS = {
+    s1q1: "How did you become a doula?",
+    s1q2: "How long have you been doing this?",
+    s1q3: "About how many births have you attended?",
+    s1q4: "How much of your work is with first-time parents?",
+
+    s2q1: "Have you attended births at VHC before?",
+    s2q2: "What is the labor and delivery environment like there?",
+    s2q3: "How do the nurses and OBs usually interact with doulas?",
+    s2q4: "Are there any hospital routines at VHC that we should be aware of ahead of time?",
+
+    s3q1: "How do you support people who have never given birth before?",
+    s3q2: "How do you help us prepare mentally and emotionally for labor?",
+    s3q3: "How do you help us understand our options when decisions come up?",
+    s3q4: "What does “informed consent” mean in your work?",
+
+    s4q1: "How do you support low-intervention births in a medical setting?",
+    s4q2: "How do you feel about epidurals and pain medication?",
+    s4q3: "How do you handle it if plans change during labor?",
+    s4q4: "How do you advocate for us while still working well with the hospital staff?",
+
+    s5q1: "How do you support the non-birthing partner during labor?",
+    s5q2: "How do you help partners know what to do and how to help?",
+    s5q3: "What do you do if one of us is feeling overwhelmed or anxious?",
+    s5q4: "How do you make sure we still feel in control of our birth?",
+
+    s6q1: "What kinds of comfort measures do you use most?",
+    s6q2: "How do you help with things like back labor or long inductions?",
+    s6q3: "How do you know when it’s time to switch techniques?",
+    s6q4: "How do you support someone with an epidural?",
+    s6q5: "How do you support someone without one?",
+
+    s7q1: "Do you provide a TENS unit?",
+    s7q2: "Is it included in your fee?",
+    s7q3: "Do you help with placement, timing, and adjusting it during labor?",
+    s7q4: "Have you used TENS units in hospital births and inductions?",
+
+    s8q1: "How do you support us if an induction is recommended?",
+    s8q2: "What do you do if labor stalls?",
+    s8q3: "How do you support us if a C-section becomes necessary?",
+    s8q4: "Are you able to come to the OR if allowed?",
+    s8q5: "How do you help us process a difficult or unexpected birth?",
+
+    s9q1: "Do you stay for the golden hour?",
+    s9q2: "How do you help with the first latch and breastfeeding?",
+    s9q3: "What postpartum visits are included?",
+    s9q4: "How do you support emotional recovery after birth?",
+
+    s10q1: "How many clients do you take around our due date?",
+    s10q2: "Who is your backup if you’re at another birth?",
+    s10q3: "How do we reach you when labor starts?",
+    s10q4: "When do you usually come to the hospital?",
+
+    s11q1: "What kinds of families do you work best with?",
+    s11q2: "What kinds of families might not be a great fit?",
+    s11q3: "What’s a birth you’re especially proud of?",
+    s11q4: "Why do you do this work?",
+
+    s12q1: "What’s included in your fee?",
+    s12q2: "When is payment due?",
+    s12q3: "What’s your refund or cancellation policy?",
+    s12q4: "What happens if we end up with a scheduled C-section?",
+    s12q5: "Are you insured and certified?"
+  };
+
+  // ------------------------------
+  // Persistence (localStorage)
+  // ------------------------------
+  const KEY = "doulaInterview_vhc_v2";
+  function loadState(){
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}"); }
+    catch { return {}; }
+  }
+  function saveState(state){
+    localStorage.setItem(KEY, JSON.stringify(state));
+  }
+  let state = loadState();
+
+  // ------------------------------
+  // Render a question item
+  // ------------------------------
+  function renderQuestion(li, id){
+    const text = QUESTIONS[id] || "";
+    const checked = !!state[id]?.checked;
+    const noteQ = state[id]?.noteQ || "";
+    const noteA = state[id]?.noteA || "";
+
+    li.innerHTML = `
+      <div class="qrow">
+        <input type="checkbox" id="${id}" ${checked ? "checked" : ""} />
+        <div class="qtext">
+          <div class="label">
+            <span class="qplain" data-qtext="${id}">${escapeHtml(text)}</span>
+            <div class="qactions">
+              <button class="smallbtn" type="button" data-toggle="${id}">Notes</button>
+              <button class="smallbtn" type="button" data-clear="${id}">Clear</button>
+            </div>
+          </div>
+
+          <details class="notes" id="d_${id}" ${ (noteQ || noteA) ? "open" : "" }>
+            <summary>Optional notes (click to open/close)</summary>
+            <div class="notesbox">
+              <div>
+                <label for="nq_${id}">Their question / follow-up (optional)</label>
+                <textarea id="nq_${id}" placeholder="e.g., 'Do you want us to take a class?'"></textarea>
+              </div>
+              <div>
+                <label for="na_${id}">Our notes on their answer (optional)</label>
+                <textarea id="na_${id}" placeholder="e.g., 'Very calm; lots of VHC experience; good partner coaching.'"></textarea>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    `;
+
+    // apply existing values
+    li.querySelector(`#nq_${id}`).value = noteQ;
+    li.querySelector(`#na_${id}`).value = noteA;
+
+    // done style
+    li.classList.toggle("done", checked);
+
+    // handlers
+    li.querySelector(`#${id}`).addEventListener("change", (e) => {
+      state[id] = state[id] || {};
+      state[id].checked = e.target.checked;
+      saveState(state);
+      li.classList.toggle("done", e.target.checked);
+    });
+
+    // notes toggle button
+    li.querySelector(`[data-toggle="${id}"]`).addEventListener("click", () => {
+      const det = li.querySelector(`#d_${id}`);
+      det.open = !det.open;
+    });
+
+    // clear button
+    li.querySelector(`[data-clear="${id}"]`).addEventListener("click", () => {
+      state[id] = { checked: false, noteQ: "", noteA: "" };
+      saveState(state);
+      li.querySelector(`#${id}`).checked = false;
+      li.classList.remove("done");
+      li.querySelector(`#nq_${id}`).value = "";
+      li.querySelector(`#na_${id}`).value = "";
+      li.querySelector(`#d_${id}`).open = false;
+    });
+
+    // note inputs autosave
+    li.querySelector(`#nq_${id}`).addEventListener("input", (e) => {
+      state[id] = state[id] || {};
+      state[id].noteQ = e.target.value;
+      saveState(state);
+    });
+    li.querySelector(`#na_${id}`).addEventListener("input", (e) => {
+      state[id] = state[id] || {};
+      state[id].noteA = e.target.value;
+      saveState(state);
+    });
+  }
+
+  function escapeHtml(str){
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  // ------------------------------
+  // Initialize
+  // ------------------------------
+  // Date
   const d = new Date();
   document.getElementById('date').textContent = d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
 
-  // Count per section and make section collapsible by clicking header
+  // Render all placeholder LIs
+  document.querySelectorAll(".qitem").forEach(li => {
+    const id = li.getAttribute("data-id");
+    renderQuestion(li, id);
+  });
+
+  // Count per section + collapse/expand by clicking header
   const sections = Array.from(document.querySelectorAll('section'));
   sections.forEach(sec => {
-    const items = sec.querySelectorAll('li');
+    const items = sec.querySelectorAll('.qitem');
     sec.querySelector('[data-count]').textContent = `${items.length} Qs`;
     const head = sec.querySelector('.sec-head');
     head.style.cursor = 'pointer';
     head.title = 'Click to collapse/expand';
-    head.addEventListener('click', () => {
+    head.addEventListener('click', (e) => {
+      // don't collapse if user clicked the count badge
+      if (e.target.closest('.count')) return;
       sec.querySelector('ol').classList.toggle('hide');
     });
   });
 
-  // Expand / collapse all
+  // Expand/collapse all
   const expandAll = () => sections.forEach(s => s.querySelector('ol').classList.remove('hide'));
   const collapseAll = () => sections.forEach(s => s.querySelector('ol').classList.add('hide'));
 
   document.getElementById('expandAll').addEventListener('click', expandAll);
   document.getElementById('collapseAll').addEventListener('click', collapseAll);
+
+  // Reset all
+  document.getElementById('reset').addEventListener('click', () => {
+    if (!confirm("Reset all checkboxes and notes? This will clear saved data in this browser.")) return;
+    localStorage.removeItem(KEY);
+    state = {};
+    document.querySelectorAll(".qitem").forEach(li => {
+      const id = li.getAttribute("data-id");
+      renderQuestion(li, id);
+    });
+  });
+
+  // Print
   document.getElementById('print').addEventListener('click', () => window.print());
 
-  // Search + highlight
+  // Search + highlight (searches question text only)
   const input = document.getElementById('q');
-  const allLis = Array.from(document.querySelectorAll('li'));
-  const originalText = new Map(allLis.map(li => [li, li.textContent]));
+  const allItems = Array.from(document.querySelectorAll('.qitem'));
+  const questionSpans = () => Array.from(document.querySelectorAll('[data-qtext]'));
 
-  function escapeRegExp(str) {
-    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  function clearHighlights(){
+    questionSpans().forEach(span => {
+      const id = span.getAttribute("data-qtext");
+      span.innerHTML = escapeHtml(QUESTIONS[id] || "");
+    });
+    sections.forEach(sec => sec.classList.remove('hide'));
+    allItems.forEach(li => li.classList.remove('hide'));
   }
 
-  function clearHighlights() {
-    allLis.forEach(li => li.innerHTML = originalText.get(li));
-    sections.forEach(sec => sec.classList.remove('hide'));
-    // show all list items
-    allLis.forEach(li => li.classList.remove('hide'));
+  function escapeRegExp(str){
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   input.addEventListener('input', (e) => {
@@ -548,25 +787,26 @@
     if (!q) return;
 
     const re = new RegExp(escapeRegExp(q), 'ig');
-    // hide non-matching questions, collapse sections without matches
+
     sections.forEach(sec => {
-      const lis = Array.from(sec.querySelectorAll('li'));
+      const lis = Array.from(sec.querySelectorAll('.qitem'));
       let any = false;
 
       lis.forEach(li => {
-        const text = originalText.get(li);
+        const id = li.getAttribute("data-id");
+        const text = (QUESTIONS[id] || "");
         const match = text.toLowerCase().includes(q);
-        if (match) {
+        if (match){
           any = true;
-          li.innerHTML = text.replace(re, (m) => `<mark>${m}</mark>`);
           li.classList.remove('hide');
+          const span = li.querySelector(`[data-qtext="${id}"]`);
+          if (span) span.innerHTML = escapeHtml(text).replace(re, (m) => `<mark>${m}</mark>`);
         } else {
           li.classList.add('hide');
         }
       });
 
       sec.classList.toggle('hide', !any);
-      // ensure visible sections are expanded for scanning
       if (any) sec.querySelector('ol').classList.remove('hide');
     });
   });
@@ -577,14 +817,15 @@
     const lines = [];
     lines.push('Doula Interview Questions (First Baby • VHC Arlington)');
     lines.push('---');
-    sections.forEach((sec, idx) => {
+    sections.forEach((sec) => {
       const title = sec.querySelector('h2').textContent.trim();
       const prompt = sec.querySelector('.prompt')?.textContent.trim();
       lines.push('');
       lines.push(title);
       if (prompt) lines.push(prompt);
-      sec.querySelectorAll('li').forEach((li, i) => {
-        lines.push(`${i+1}. ${originalText.get(li)}`);
+      sec.querySelectorAll('.qitem').forEach((li, i) => {
+        const id = li.getAttribute("data-id");
+        lines.push(`${i+1}. ${QUESTIONS[id] || ""}`);
       });
     });
     try{
@@ -598,7 +839,7 @@
     }
   });
 
-  // Start with all expanded for interview use
+  // Start expanded for interview use
   expandAll();
 </script>
 </body>
